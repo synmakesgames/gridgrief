@@ -3,101 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Press Kit - Grid Grief</title>
+    <title>Grid Grief - Press Kit</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <div class="container">
-        <header style="text-align: center;">
-            <h1>Grid Grief - Press Kit</h1>
-            <img src="main_capsule.png" alt="Grid Grief Logo" style="max-width: 100%; height: auto; margin-bottom: 20px; border-radius: 4px;">            
-        </header>
-        <section id="factsheet">
-            <h2>Factsheet</h2>
-            <ul>
-                <li><p><strong>Steam Page: </strong> <a href="https://store.steampowered.com/app/4559240">Grid Grief</a></p></li>
-                <li><strong>Developer: </strong>SynMakesGames</li>
-                <li><strong>Publisher: </strong>SynMakesGames</li>
-                <li><strong>Team Size: </strong>1 - Solo Dev Project</li>
-                
-                <li><strong>Release Date: </strong>2026</li>
-                <li><strong>Platforms: </strong>PC (Steam)</li>
-                <li><strong>Genre: </strong>Roguelite, Roguelike, Strategy, Deckbuilding, Singleplayer</li>
-
-                <li><strong>Demo: </strong>Later this year</li>
-                
-            </ul>
-        </section>
-
-        <section id="trailer">
-            <h2>Reveal Trailer</h2>
-            <div class="video-container">
-                <iframe width="100%" height="450" src="https://www.youtube.com/embed/Qxa06a-mZl0?si=qzvkyEofjgbGrTzB" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
-        
-        <section id="description">
-            <h2>Description</h2>
-            <h3>The Pitch (Short)</h3>
-            <p>A <strong>roguelite plinko-style pinbuilder</strong> about escaping the space between heaven & hell. Forge <strong>powerful synergies</strong>, <strong>trigger chaotic</strong> screen filling effects and rack up <strong>huge scores</strong> to secure your resurrection. </p>
+        <!-- Header / Banner -->
+        <header class="press-header">
+            <img src="main_capsule.png" alt="Grid Grief Header Banner" class="header-img">
+            <h1 class="title">Grid Grief</h1>
+            <p class="tagline">A roguelite plinko-style pinbuilder about escaping the space between heaven & hell.</p>
             
-            <h3>The Game (Long)</h3>
-            <p><strong>Grid Grief</strong> is a roguelite pin-builder where players navigate a haunting afterlife by strategically placing pins on an ever-evolving grid. Every placement is a gamble between progression and permanent loss, forcing players to weigh immediate rewards against long-term survival.</p>
-            <p>As your run goes on, you will uncover unique pins, perks and secrets that trigger explosive combos. By collecting and placing pins, players can create "game-breaking" synergies that snowball a standard run into a dazzling, rule-bending escape attempt.</p>
-            <p>Your only escape path is to build a grid capable of shattering a god.</p> 
-            <p>Grid Grief combines the plinko style of <em>Peggle</em> with roguelike mechanics, putting a unique pin-building twist on the genre inspired by games like <em>Clover Pit</em> and <em>Nubby's Number Factory</em>.</p>
-            <p>At its heart, Grid Grief is a dark tale of calculation and escape, where strategic placement determines whether you transcend to glory or remain lost in grief.
-
-        <h3>Core Features</h3>
-        <ul>
-            <li><strong>Rogue-lite Strategy:</strong> A high-stakes pin-builder where every round could be your last.</li>
-            <li><strong>100+ Unique Pin Effects:</strong> Endless variety in how you influence the outcome of your run</li>
-            <li><strong>Game-Breaking Synergies:</strong> Discover perks and pin combinations that allow you to bend the rules and break the game.</li>
-            <li><strong>Meta Progression:</strong> Unlockable run modifiers and permanent progression to aid your escape.</li>
-            <li><strong>Plinky Plonking!</strong> Addictive, tactile mechanics centered around forging a god-destroying grid.</li>
-            <li><strong>Forge a Path:</strong> Build a grid capable of shattering a god and escaping the afterlife.</li>
-        </ul>
-        </section>
-
-        <section id="images">
-            <h2>Screenshots</h2>
-            <div class="grid">
-                <a href="screenshot0.jpg" target="_blank">
-                    <img src="screenshot0.jpg" alt="Grid Grief Gameplay" style="width: 100%; cursor: pointer;">
-                </a>
-        
-                <a href="screenshot1.jpg" target="_blank">
-                    <img src="screenshot1.jpg" alt="Grid Grief Gameplay" style="width: 100%; cursor: pointer;">
-                </a>
-
-                <a href="screenshot2.jpg" target="_blank">
-                    <img src="screenshot2.jpg" alt="Grid Grief Gameplay" style="width: 100%; cursor: pointer;">
-                </a>
-        
-                <a href="screenshot3.jpg" target="_blank">
-                    <img src="screenshot3.jpg" alt="Grid Grief Gameplay" style="width: 100%; cursor: pointer;">
-                </a>
-                <a href="screenshot4.jpg" target="_blank">
-                    <img src="screenshot4.jpg" alt="Grid Grief Gameplay" style="width: 100%; cursor: pointer;">
-                </a>
+            <div class="action-buttons">
+                <a href="https://store.steampowered.com/app/4559240" target="_blank" class="btn btn-primary">Steam Page</a>
+                <a href="https://drive.google.com/drive/folders/14uulcEs5SrjqL-HtMCpXr5Blm8-_i-g2?usp=sharing" target="_blank" class="btn btn-secondary">Download Asset Pack (ZIP)</a>
             </div>
-        </section>
+        </header>
 
-        <section id="Download">
-            <h2>Download Assets</h2>
-            <p><em>Logos, Screenshots & Trailer</em></p>
-            <p><a href="https://drive.google.com/drive/folders/14uulcEs5SrjqL-HtMCpXr5Blm8-_i-g2?usp=sharing" class="button">Google Drive Link</a></p>
-        </section>
+        <!-- Main Grid Layout -->
+        <main class="content-grid">
+            
+            <!-- Left Side: Factsheet & Quick Links -->
+            <aside class="sidebar">
+                <div class="card factsheet">
+                    <h2>Factsheet</h2>
+                    <ul class="fact-list">
+                        <li><strong>Developer:</strong> SynMakesGames (Solo Dev)</li>
+                        <li><strong>Publisher:</strong> SynMakesGames</li>
+                        <li><strong>Release Date:</strong> 2026</li>
+                        <li><strong>Platforms:</strong> PC (Steam)</li>
+                        <li><strong>Genre:</strong> Roguelite, Deckbuilder, Strategy</li>
+                        <li><strong>Demo:</strong> Coming later this year</li>
+                        <li><strong>Steam ID:</strong> 4559240</li>
+                    </ul>
+                </div>
 
-        <section id="contact">
-            <h2>Contact & Socials</h2>
-            <p><strong>Direct Email:</strong> <a href="mailto:synmakesgames@proton.me">synmakesgames@proton.me</a></p>
-            <p><strong>Steam Page:</strong> <a href="https://store.steampowered.com/app/4559240">Grid Grief on Steam</a></p>
-            <p><strong>YouTube:</strong> <a href="https://www.youtube.com/@SynMakesGames">@SynMakesGames</a></p>
-            <p><strong>Twitter / X:</strong> <a href="https://x.com/SynMakesGames">@SynMakesGames</a></p>
-            <p><strong>Discord:</strong> <a href="https://discord.com/invite/QNruab7Tab">https://discord.com/invite/QNruab7Tab</a></p>
-            <p><strong>TikTok:</strong> <a href="https://tiktok.com/@SynMakesGames">@SynMakesGames</a></p>
-        </section>
+                <div class="card contact">
+                    <h2>Contact & Socials</h2>
+                    <ul class="social-links">
+                        <li><strong>Email:</strong> <a href="mailto:synmakesgames@proton.me">synmakesgames@proton.me</a></li>
+                        <li><strong>Steam:</strong> <a href="https://store.steampowered.com/app/4559240" target="_blank">Grid Grief</a></li>
+                        <li><strong>YouTube:</strong> <a href="https://www.youtube.com/@SynMakesGames" target="_blank">@SynMakesGames</a></li>
+                        <li><strong>Twitter / X:</strong> <a href="https://x.com/SynMakesGames" target="_blank">@SynMakesGames</a></li>
+                        <li><strong>Discord:</strong> <a href="https://discord.com/invite/QNruab7Tab" target="_blank">Join Discord</a></li>
+                        <li><strong>TikTok:</strong> <a href="https://tiktok.com/@SynMakesGames" target="_blank">@SynMakesGames</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Right Side: Content -->
+            <section class="main-content">
+                
+                <!-- Short Pitch -->
+                <article class="card">
+                    <h2>Short Pitch</h2>
+                    <p class="pitch-text">
+                        A <strong>roguelite plinko-style pinbuilder</strong> about escaping the space between heaven & hell. Forge <strong>powerful synergies</strong>, trigger chaotic screen-filling effects, and rack up <strong>huge scores</strong> to secure your resurrection.
+                    </p>
+                </article>
+
+                <!-- Trailer -->
+                <article class="card">
+                    <h2>Reveal Trailer</h2>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/Qxa06a-mZl0?si=qzvkyEofjgbGrTzB" title="Grid Grief Reveal Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </article>
+
+                <!-- Full Description -->
+                <article class="card">
+                    <h2>About the Game</h2>
+                    <p><strong>Grid Grief</strong> is a roguelite pin-builder where players navigate a haunting afterlife by strategically placing pins on an ever-evolving grid. Every placement is a gamble between progression and permanent loss, forcing players to weigh immediate rewards against long-term survival.</p>
+                    <p>As your run goes on, you will uncover unique pins, perks, and secrets that trigger explosive combos. By collecting and placing pins, players can create "game-breaking" synergies that snowball a standard run into a dazzling, rule-bending escape attempt.</p>
+                    <p>Your only escape path is to build a grid capable of shattering a god.</p>
+                    <p>Grid Grief combines the plinko style of <em>Peggle</em> with roguelike mechanics, putting a unique pin-building twist on the genre inspired by games like <em>Clover Pit</em> and <em>Nubby's Number Factory</em>.</p>
+                    
+                    <h3>Core Features</h3>
+                    <ul class="features-list">
+                        <li><strong>Rogue-lite Strategy:</strong> High-stakes pin-building where every round could be your last.</li>
+                        <li><strong>100+ Unique Pin Effects:</strong> Endless variety in how you influence the outcome of your run.</li>
+                        <li><strong>Game-Breaking Synergies:</strong> Discover perks and pin combinations that bend rules and break the game.</li>
+                        <li><strong>Meta Progression:</strong> Unlockable run modifiers and permanent progression to aid your escape.</li>
+                        <li><strong>Tactile Mechanics:</strong> Addictive, "plinky-plonking" action centered around forging a god-destroying grid.</li>
+                    </ul>
+                </article>
+
+                <!-- Gallery -->
+                <article class="card">
+                    <h2>Screenshots</h2>
+                    <div class="screenshot-grid">
+                        <a href="screenshot0.jpg" target="_blank" class="screenshot-item">
+                            <img src="screenshot0.jpg" alt="Grid Grief Gameplay Screenshot 1">
+                        </a>
+                        <a href="screenshot1.jpg" target="_blank" class="screenshot-item">
+                            <img src="screenshot1.jpg" alt="Grid Grief Gameplay Screenshot 2">
+                        </a>
+                        <a href="screenshot2.jpg" target="_blank" class="screenshot-item">
+                            <img src="screenshot2.jpg" alt="Grid Grief Gameplay Screenshot 3">
+                        </a>
+                        <a href="screenshot3.jpg" target="_blank" class="screenshot-item">
+                            <img src="screenshot3.jpg" alt="Grid Grief Gameplay Screenshot 4">
+                        </a>
+                        <a href="screenshot4.jpg" target="_blank" class="screenshot-item">
+                            <img src="screenshot4.jpg" alt="Grid Grief Gameplay Screenshot 5">
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Downloads Bar -->
+                <article class="card download-card">
+                    <div>
+                        <h2>Download Press Assets</h2>
+                        <p>High-res screenshots, key art, transparent logos, and trailer files are available on Google Drive.</p>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/14uulcEs5SrjqL-HtMCpXr5Blm8-_i-g2?usp=sharing" target="_blank" class="btn btn-primary">Open Google Drive</a>
+                </article>
+
+            </section>
+        </main>
     </div>
+
 </body>
 </html>
