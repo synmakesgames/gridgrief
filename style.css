@@ -1,41 +1,217 @@
+/* Notion-inspired Dark Theme Styling */
+:root {
+    --bg-color: #0f1117;
+    --card-bg: #161922;
+    --card-border: #262b38;
+    --text-primary: #e6e8ec;
+    --text-secondary: #9da3ae;
+    --accent-color: #6366f1;
+    --accent-hover: #4f46e5;
+    --btn-secondary: #212634;
+    --btn-secondary-hover: #2d3446;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
     line-height: 1.6;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
     padding: 40px 20px;
-    background: #f4f4f4;
 }
 
 .container {
-    background: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-h1, h2 { color: #111; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-
-ul { list-style: none; padding: 0; }
-li { margin-bottom: 10px; }
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin: 20px 0;
+/* Header */
+.press-header {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-img { width: 100%; border-radius: 4px; }
+.header-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    margin-bottom: 24px;
+}
 
-.button {
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 24px auto;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
     display: inline-block;
     padding: 10px 20px;
-    background: #007bff;
-    color: white;
+    border-radius: 6px;
+    font-weight: 600;
     text-decoration: none;
-    border-radius: 4px;
+    transition: background 0.2s ease;
 }
 
-.button:hover { background: #0056b3; }
+.btn-primary {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-secondary {
+    background-color: var(--btn-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--card-border);
+}
+
+.btn-secondary:hover {
+    background-color: var(--btn-secondary-hover);
+}
+
+/* Layout Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 24px;
+}
+
+/* Cards */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.card h3 {
+    font-size: 1rem;
+    margin: 16px 0 8px 0;
+}
+
+/* Factsheet & Contacts */
+.fact-list, .social-links {
+    list-style: none;
+}
+
+.fact-list li, .social-links li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+}
+
+.fact-list strong, .social-links strong {
+    color: var(--text-primary);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Pitch & Features */
+.pitch-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.features-list {
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+.features-list li {
+    margin-bottom: 8px;
+}
+
+/* Responsive Trailer */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Screenshot Grid */
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.screenshot-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--card-border);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    display: block;
+}
+
+.screenshot-item img:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-color);
+}
+
+/* Download Card */
+.download-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 800px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
