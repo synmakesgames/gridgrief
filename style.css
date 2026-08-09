@@ -1,13 +1,12 @@
-/* Notion Dark Theme Colors & Font Specs */
+/* Notion Dark Theme Tokens */
 :root {
   --bg-main: #191919;
   --bg-card: #262626;
-  --bg-card-hover: #2e2e2e;
   --border-card: #333333;
   --text-main: #d3d3d3;
   --text-white: #ffffff;
   --text-muted: #888888;
-  --accent-red: #e05252; /* Matching the red/coral heading in screenshot */
+  --accent-red: #e05252;
   --link-blue: #529cca;
 }
 
@@ -26,9 +25,9 @@ body.notion-dark-theme {
   padding-bottom: 100px;
 }
 
-/* Page Layout */
+/* Centered Main Wrapper */
 .notion-wrapper {
-  max-width: 1100px;
+  max-width: 1050px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -54,6 +53,7 @@ body.notion-dark-theme {
   margin-bottom: 24px;
   position: relative;
   z-index: 2;
+  text-align: left;
 }
 
 .notion-page-icon {
@@ -77,7 +77,7 @@ body.notion-dark-theme {
   letter-spacing: -0.01em;
 }
 
-/* Column Structure */
+/* Columns Grid Layout */
 .notion-columns {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -85,7 +85,11 @@ body.notion-dark-theme {
   align-items: start;
 }
 
-/* Card Styling (Exact match to screenshot) */
+.notion-col-main {
+  width: 100%;
+}
+
+/* Card Styling */
 .notion-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-card);
@@ -98,6 +102,22 @@ body.notion-dark-theme {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 14px;
+}
+
+.sub-heading {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-white);
+  margin-bottom: 6px;
+}
+
+.description-text {
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+.description-text:last-child {
+  margin-bottom: 0;
 }
 
 .red-text {
@@ -139,7 +159,7 @@ body.notion-dark-theme {
   color: var(--text-main);
 }
 
-/* Media Containers & Videos */
+/* Media Containers */
 .media-container {
   width: 100%;
   border-radius: 6px;
@@ -168,10 +188,10 @@ body.notion-dark-theme {
   border-radius: 6px;
 }
 
-/* Media Grids (Screenshots / Logos) */
+/* Media Grids */
 .media-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 12px;
   margin-bottom: 12px;
 }
@@ -182,10 +202,15 @@ body.notion-dark-theme {
   object-fit: cover;
   border-radius: 6px;
   border: 1px solid var(--border-card);
+  transition: opacity 0.2s ease;
+}
+
+.media-grid img:hover {
+  opacity: 0.85;
 }
 
 .logo-grid {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .logo-box {
@@ -198,20 +223,15 @@ body.notion-dark-theme {
   border: 1px solid var(--border-card);
 }
 
-.logo-box.transparent-bg {
-  background: repeating-conic-gradient(#202020 0% 25%, #181818 0% 50%) 50% / 16px 16px;
-}
-
 .logo-box img {
   max-width: 100%;
   height: auto;
-  border: none;
 }
 
 /* Download Link Bar */
 .download-bar {
-  margin-top: 8px;
-  padding-top: 8px;
+  margin-top: 12px;
+  padding-top: 10px;
   border-top: 1px dashed var(--border-card);
 }
 
@@ -227,7 +247,7 @@ body.notion-dark-theme {
   text-decoration: underline;
 }
 
-/* Contacts List */
+/* Contact List */
 .contact-list {
   list-style: none;
 }
@@ -245,7 +265,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Responsive Scaling */
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .notion-columns {
     grid-template-columns: 1fr;
